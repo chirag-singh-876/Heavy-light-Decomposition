@@ -152,9 +152,7 @@ void solve(){
             if(depthv[headv[a]] < depthv[headv[b]]){
                 int t=a; a=b; b=t;
             }
-            int L = min(assidx[a], assidx[headv[a]]);
-            int R = max(assidx[a], assidx[headv[a]]);
-            long long qres = sg.rangeMax(L, R);
+            long long qres = sg.rangeMax(assidx[headv[a]], assidx[a]);
             ans = max(ans, qres);
             a = parentv[headv[a]];
         }

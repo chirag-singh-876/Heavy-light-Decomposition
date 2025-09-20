@@ -125,7 +125,7 @@ public class Main {
                         a =b;
                         b = t;
                 }
-                long query = sg.rangeMax(Math.min(assidx[a], assidx[head[a]]), Math.max(assidx[a], assidx[head[a]]));
+                long query = sg.rangeMax(assidx[head[a]],assidx[a]);
                 ans = Math.max(ans,query);
                 a = parent[head[a]];
             }
